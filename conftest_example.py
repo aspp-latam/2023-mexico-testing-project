@@ -15,7 +15,7 @@ def pytest_configure(config):
     seed = config.getvalue("seed")
     # if seed was not set by the user, we set one now
     if seed is None or seed == ('NO', 'DEFAULT'):
-        config.option.seed = int(np.random.randint(2**31-1))
+        config.option.seed = int(np.random.randint(2 ** 31 - 1))
 
 
 def pytest_report_header(config):
